@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Fonts ──────────────────────────────────────────────────────── */
+  --font-heading: var(--font-fredoka, 'Fredoka', sans-serif);
+  --font-body:    var(--font-nunito,  'Nunito',  sans-serif);
+
+  /* ── Brand accent colours (use sparingly per design rules) ─────── */
+  --color-adhasi-green:     #7CB342;   /* success/indicators only */
+  --color-adhasi-green-50:  #F1F8E9;
+  --color-adhasi-green-100: #DCEDC8;
+  --color-adhasi-green-700: #558B2F;
+
+  --color-adhasi-orange:     #2D7D9A;  /* primary CTA only */
+  --color-adhasi-orange-50:  #E8F4F8;
+  --color-adhasi-orange-600: #23617A;  /* hover state */
+
+  --color-adhasi-red:    #E8414B;
+  --color-adhasi-blue:   #29B6F6;      /* info/links only */
+
+  /* ── Clean palette ───────────────────────────────────────────────── */
+  --color-surface:       #FAFAF7;     /* warm off-white for section backgrounds */
+  --color-adhasi-border:  #E5E7EB;     /* card + divider borders */
+
+  /* ── Neutral scale ───────────────────────────────────────────────── */
+  --color-neutral-900: #171717;
+  --color-neutral-700: #374151;
+  --color-neutral-600: #4B5563;
+  --color-neutral-500: #6B7280;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-300: #D1D5DB;
+  --color-neutral-200: #E5E7EB;
+  --color-neutral-100: #F3F4F6;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────── */
+body {
+  background-color: #FFFFFF;
+  color: #171717;
+  font-family: var(--font-body, 'Nunito', sans-serif);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* ── Prose (Ratgeber articles) ────────────────────────────────────── */
+.prose h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #171717;
+}
+.prose h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+.prose p  { margin-bottom: 1rem; }
+.prose ul { list-style-type: disc;     padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose ol { list-style-type: decimal;  padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose li { margin-bottom: 0.4rem; }
+.prose a  { color: #29B6F6; text-decoration: underline; }
+.prose a:hover { color: #0288d1; }
+.prose strong { font-weight: 700; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9rem; }
+.prose th { background: #FAFAF7; padding: 0.5rem 0.75rem; text-align: left; border: 1px solid #E5E7EB; font-weight: 700; }
+.prose td { padding: 0.5rem 0.75rem; border: 1px solid #E5E7EB; vertical-align: top; }
+.prose blockquote {
+  border-left: 4px solid #7CB342;
+  padding-left: 1rem;
+  color: #374151;
+  font-style: italic;
+  margin: 1.5rem 0;
+}

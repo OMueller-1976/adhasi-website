@@ -1,0 +1,35 @@
+import type { MetadataRoute } from 'next'
+
+const BASE_URL = 'https://www.adhasi.de'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: BASE_URL,                                                                          lastModified: new Date(), changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${BASE_URL}/app`,                                                                 lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/adhs-grundlagen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/adhs-foerderung`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/adhs-eltern-tipps`,                                                  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/adhs-uebungen`,                                                      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/adhs-app`,                                                           lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/paedagogen-therapeuten-adhs`,                                        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/ratgeber`,                                                            lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/paedagogen`,                                                          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/adhs-verstehen`,                                             lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/lernmethodik`,                                               lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/hilfsorganisationen`,                                        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/quellen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/positive-erziehung-bei-lernschwierigkeiten`,                 lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/motivation-bei-schulfrust`,                                  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/selbstwert-staerken`,                                        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/kommunikation-mit-adhs-kind`,                                lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/medienkompetenz-bei-adhs`,                                   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/bildschirmzeit-konzentration`,                               lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/family-link-bildschirmzeit-apps`,                            lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/ratgeber/digitale-hilfsmittel-adhs`,                                  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/veranstaltungen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/buchempfehlungen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/datenschutz`,                                                         lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.5 },
+    { url: `${BASE_URL}/agb`,                                                                 lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.5 },
+    { url: `${BASE_URL}/impressum`,                                                           lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.5 },
+  ]
+}
