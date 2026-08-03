@@ -7,6 +7,7 @@ const adhsWissenLinks = [
   { href: '/adhs-foerderung', label: 'ADHS Förderung' },
   { href: '/adhs-eltern-tipps', label: 'ADHS Eltern-Tipps' },
   { href: '/adhs-uebungen', label: 'ADHS Übungen' },
+  { href: '/achtsamkeit', label: 'Achtsamkeit' },
   { href: '/adhs-app', label: 'ADHS App für Kinder' },
   { href: '/veranstaltungen', label: 'Veranstaltungen 2026' },
 ]
@@ -44,7 +45,7 @@ export default function Footer() {
           </Link>
           <p className="text-sm leading-relaxed">
             Die spielerische Lernapp für Kinder mit ADHS.
-            Bald im Google Play Store.
+            Jetzt im App Store verfügbar.
           </p>
         </div>
 

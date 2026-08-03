@@ -303,6 +303,11 @@ export default function AdhsUebungenPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <p className="font-body text-sm font-semibold text-neutral-500 mb-4 uppercase tracking-wider">Weiterführende Themen</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <Link href="/achtsamkeit" className="bg-white border border-adhasi-border rounded-xl px-4 py-3.5 hover:border-adhasi-green hover:shadow-sm transition-all group">
+              <span className="text-2xl block mb-1">🌬</span>
+              <span className="font-heading text-sm font-bold text-neutral-900 group-hover:text-adhasi-green">Mehr Ruhe für dein Kind</span>
+              <p className="font-body text-xs text-neutral-500 mt-0.5">Unsere kostenlosen Achtsamkeitsübungen und Atemtechniken →</p>
+            </Link>
             <Link href="/adhs-grundlagen" className="bg-white border border-adhasi-border rounded-xl px-4 py-3.5 hover:border-adhasi-green hover:shadow-sm transition-all group">
               <span className="text-2xl block mb-1">🧠</span>
               <span className="font-heading text-sm font-bold text-neutral-900 group-hover:text-adhasi-green">ADHS Grundlagen</span>
@@ -312,11 +317,6 @@ export default function AdhsUebungenPage() {
               <span className="text-2xl block mb-1">🌱</span>
               <span className="font-heading text-sm font-bold text-neutral-900 group-hover:text-adhasi-green">ADHS Förderung</span>
               <p className="font-body text-xs text-neutral-500 mt-0.5">Therapie & was wirklich hilft</p>
-            </Link>
-            <Link href="/app" className="bg-white border border-adhasi-border rounded-xl px-4 py-3.5 hover:border-adhasi-green hover:shadow-sm transition-all group">
-              <span className="text-2xl block mb-1">📱</span>
-              <span className="font-heading text-sm font-bold text-neutral-900 group-hover:text-adhasi-green">ADHaSi App</span>
-              <p className="font-body text-xs text-neutral-500 mt-0.5">Übungen digital & spielerisch</p>
             </Link>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/admin/',
-          '/eltern/',
+          '/eltern/dashboard',
           '/paedagogen/dashboard',
           '/konto-loeschen',
           '/email-abmelden',

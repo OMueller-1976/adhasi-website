@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import StoreButtons from '@/components/StoreButtons'
 import Hero from '@/components/Hero'
 import FeatureGrid from '@/components/FeatureGrid'
 import StructuredData from '@/components/StructuredData'
@@ -48,6 +49,25 @@ export default function HomePage() {
       <StructuredData data={softwareApplicationJsonLd()} />
 
       <Hero />
+
+      {/* Lersi circle button — straddles Hero / FeatureGrid boundary */}
+      <div className="relative z-10" style={{ height: 0 }}>
+        <a
+          href="https://lersi.de"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-4 md:left-8 -translate-y-1/2 flex flex-col items-center justify-center rounded-full border-2 border-[#9FE1CB] w-36 h-36 md:w-[180px] md:h-[180px] cursor-pointer transition-all duration-200 hover:scale-105 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+          style={{ backgroundColor: '#EEF9F5' }}
+        >
+          <span style={{ fontSize: 42, lineHeight: 1 }}>📚</span>
+          <span style={{ fontSize: 13, color: '#888', marginTop: 8, lineHeight: 1.2, textAlign: 'center' }}>
+            Auch für Kinder mit
+          </span>
+          <span style={{ fontSize: 16, fontWeight: 700, color: '#1D4ED8', marginTop: 8, lineHeight: 1.2, textAlign: 'center' }}>
+            LRS &amp; Legasthenie
+          </span>
+        </a>
+      </div>
 
       <FeatureGrid />
 
@@ -195,18 +215,13 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-adhasi-green" aria-labelledby="cta-heading">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <h2 id="cta-heading" className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-            7 Tage kostenlos testen – jederzeit kündbar
+            ADHaSi jetzt kostenlos testen
           </h2>
           <p className="font-body text-white/90 text-lg mb-8">
-            Starte noch heute mit ADHaSi. Kein Abo nötig, keine Kreditkarte — einfach App öffnen und loslegen.
+            7 Tage gratis – keine Kreditkarte nötig.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#early-access"
-              className="inline-flex items-center justify-center gap-2 bg-white text-adhasi-green font-body font-bold px-8 py-4 rounded-xl hover:bg-neutral-50 transition-colors text-base shadow-sm"
-            >
-              Jetzt kostenlos starten
-            </Link>
+          <div className="flex justify-center">
+            <StoreButtons />
           </div>
         </div>
       </section>

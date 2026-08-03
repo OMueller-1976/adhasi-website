@@ -1,7 +1,7 @@
 import {
   Brain, Star, BookOpen, BarChart2, Shield, EyeOff,
 } from 'lucide-react'
-import EarlyAccessForm from '@/components/EarlyAccessForm'
+import StoreButtons from '@/components/StoreButtons'
 import StructuredData from '@/components/StructuredData'
 import { defaultMetadata, breadcrumbJsonLd, faqJsonLd, softwareApplicationJsonLd } from '@/lib/seo'
 import type { Metadata } from 'next'
@@ -129,11 +129,11 @@ const faqs = [
   },
   {
     q: 'Kann ich jederzeit kündigen?',
-    a: 'Ja. Das Abonnement kann jederzeit über Google Play verwaltet und gekündigt werden. Keine Mindestlaufzeit beim Monatsplan.',
+    a: 'Ja. Das Abonnement kann jederzeit über den jeweiligen App Store (Apple oder Google Play) verwaltet und gekündigt werden. Keine Mindestlaufzeit beim Monatsplan.',
   },
   {
-    q: 'Gibt es eine iOS-Version?',
-    a: 'Aktuell fokussieren wir uns auf Android (Google Play Store). Eine iOS-Version ist in Planung — trag dich für den Early Access ein, um benachrichtigt zu werden.',
+    q: 'Gibt es eine Android-Version?',
+    a: 'ADHaSi ist aktuell im Apple App Store verfügbar. Eine Android-Version für den Google Play Store ist in Entwicklung und erscheint in Kürze.',
   },
 ]
 
@@ -155,8 +155,8 @@ export default function AppPage() {
           { question: 'Ersetzt ADHaSi eine ADHS-Therapie?', answer: 'Nein. ADHaSi ist eine spielerische Ergänzung, keine klinische Therapie. Wir empfehlen, ADHaSi parallel zu einer fachlichen Förderung zu nutzen.' },
           { question: 'Wie sicher sind die Daten meines Kindes?', answer: 'Alle Daten werden auf Servern in Europa gespeichert. Kinderdaten werden gemäß DSGVO Art. 8 geschützt — kein Tracking, kein Profiling, kein Datenverkauf.' },
           { question: 'Gibt es Werbung in der App?', answer: 'Nein. ADHaSi ist vollständig werbefrei. Es gibt keine Drittanbieter-Werbung und kein Behavioral Targeting.' },
-          { question: 'Kann ich jederzeit kündigen?', answer: 'Ja. Das Abonnement kann jederzeit über Google Play verwaltet und gekündigt werden. Keine Mindestlaufzeit beim Monatsplan.' },
-          { question: 'Gibt es eine iOS-Version?', answer: 'Aktuell fokussieren wir uns auf Android (Google Play Store). Eine iOS-Version ist in Planung — trag dich für den Early Access ein, um benachrichtigt zu werden.' },
+          { question: 'Kann ich jederzeit kündigen?', answer: 'Ja. Das Abonnement kann jederzeit über den jeweiligen App Store (Apple oder Google Play) verwaltet und gekündigt werden. Keine Mindestlaufzeit beim Monatsplan.' },
+          { question: 'Gibt es eine Android-Version?', answer: 'ADHaSi ist aktuell im Apple App Store verfügbar. Eine Android-Version für den Google Play Store ist in Entwicklung und erscheint in Kürze.' },
         ])}
       />
 
@@ -166,7 +166,7 @@ export default function AppPage() {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-surface border border-adhasi-border text-neutral-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-adhasi-green inline-block" />
-              Bald im Play Store verfügbar
+              Jetzt im App Store verfügbar ✓
             </div>
             <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
               ADHaSi App – spielerisch lernen mit ADHS
@@ -175,9 +175,7 @@ export default function AppPage() {
               Die Lernapp, die Kinder mit Lese- und Rechtschreibschwäche spielerisch unterstützt —
               mit KI-gestützter Lernbegleitung, angepasst an ihr Tempo.
             </p>
-            <div id="early-access-app">
-              <EarlyAccessForm />
-            </div>
+            <StoreButtons />
           </div>
           <div className="flex-shrink-0">
             <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-[360px] lg:h-[360px]" style={{ borderRadius: '40px', overflow: 'hidden', background: 'white' }}>
@@ -320,16 +318,16 @@ export default function AppPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-16 sm:py-20 bg-adhasi-orange" aria-labelledby="app-cta-heading">
+      <section className="py-16 sm:py-20 bg-adhasi-green" aria-labelledby="app-cta-heading">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <h2 id="app-cta-heading" className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-            Werde Teil der ADHaSi-Familie
+            ADHaSi jetzt kostenlos testen
           </h2>
           <p className="font-body text-white/90 text-lg mb-8">
-            Trag dich jetzt ein — du bekommst eine E-Mail, sobald ADHaSi im Play Store verfügbar ist.
+            7 Tage gratis – keine Kreditkarte nötig.
           </p>
           <div className="flex justify-center">
-            <EarlyAccessForm />
+            <StoreButtons />
           </div>
         </div>
       </section>

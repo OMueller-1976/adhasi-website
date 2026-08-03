@@ -7,12 +7,7 @@ import {
   TTL_SECONDS,
 } from '@/lib/paedagogenSession';
 
-interface ChildRow {
-  id:        string;
-  name:      string;
-  public_id: string;
-  parent_id: string;
-}
+const INVALID = { error: 'Ungültige Zugangsdaten' } as const;
 
 export async function POST(req: Request) {
   const body = await req.json() as { lernId?: string; code?: string };
@@ -26,36 +21,43 @@ export async function POST(req: Request) {
 
   const admin = getSupabaseAdmin();
 
-  // 1. Validate: Lern-ID (child_profiles.public_id) + Lehrer-PIN (parent_profiles.parent_pin)
-  const { data: rows, error: dbError } = await admin
+  // 1. Resolve child by Lern-ID
+  const { data: child, error: childError } = await admin
     .from('child_profiles')
-    .select('id, name, public_id, parent_id, parent_profiles!inner(parent_pin)')
+    .select('id, name, parent_id')
     .eq('public_id', lernId)
-    .eq('parent_profiles.parent_pin', pin)
-    .limit(1);
+    .maybeSingle();
 
-  if (dbError) {
-    console.error('[paedagogen-login] step=DB_VALIDATE', {
-      error: dbError.message,
-      code:  dbError.code,
-    });
-    return NextResponse.json({ error: 'Lern-ID oder Lehrer-PIN ungültig.' }, { status: 401 });
+  if (childError) {
+    console.error('[paedagogen-login] step=CHILD_LOOKUP', childError.message);
+    return NextResponse.json(INVALID, { status: 401 });
+  }
+  if (!child) {
+    return NextResponse.json(INVALID, { status: 401 });
   }
 
-  const match = (rows as ChildRow[] | null)?.[0] ?? null;
-  console.log('[paedagogen-login] step=DB_VALIDATE found=' + !!match);
+  // 2. Verify Lehrer-PIN against parent_profiles
+  const { data: parent, error: parentError } = await admin
+    .from('parent_profiles')
+    .select('parent_pin')
+    .eq('id', child.parent_id)
+    .maybeSingle();
 
-  if (!match) {
-    return NextResponse.json({ error: 'Lern-ID oder Lehrer-PIN ungültig.' }, { status: 401 });
+  if (parentError) {
+    console.error('[paedagogen-login] step=PARENT_LOOKUP', parentError.message);
+    return NextResponse.json(INVALID, { status: 401 });
+  }
+  if (!parent || parent.parent_pin !== pin) {
+    return NextResponse.json(INVALID, { status: 401 });
   }
 
-  // 2. Sign session token (code_id not used in this auth flow → empty string)
+  // 3. Sign session token
   let token: string;
   try {
     token = await createPaedagogenSessionToken({
-      child_id:   match.id,
-      parent_id:  match.parent_id,
-      child_name: String(match.name),
+      child_id:   child.id,
+      parent_id:  child.parent_id,
+      child_name: String(child.name),
       code_id:    '',
     });
   } catch (e) {
@@ -63,7 +65,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Interner Fehler.' }, { status: 500 });
   }
 
-  // 3. Set HttpOnly cookie
+  // 4. Set HttpOnly cookie
   const jar = await cookies();
   jar.set(COOKIE_NAME, token, {
     httpOnly: true,

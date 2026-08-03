@@ -15,7 +15,6 @@ export default function LoginForm() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [resetSent, setResetSent] = useState(false);
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -34,22 +33,6 @@ export default function LoginForm() {
       setError('Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut.');
     } finally {
       setLoading(false);
-    }
-  }
-
-  async function handleReset() {
-    if (!email) {
-      setError('Bitte zuerst E-Mail eingeben.');
-      return;
-    }
-    const sb = getSupabaseBrowser();
-    const { error: resetError } = await sb.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/eltern/login`,
-    });
-    if (resetError) {
-      setError(resetError.message);
-    } else {
-      setResetSent(true);
     }
   }
 
@@ -117,12 +100,6 @@ export default function LoginForm() {
             </div>
 
             {error && <p className="text-sm text-red-600">{error}</p>}
-            {resetSent && (
-              <p className="text-sm text-emerald-700">
-                E-Mail zum Zurücksetzen wurde versendet.
-              </p>
-            )}
-
             <button
               type="submit"
               disabled={loading}
@@ -133,13 +110,10 @@ export default function LoginForm() {
           </form>
 
           <div className="flex justify-between mt-4 text-sm">
-            <button
-              onClick={handleReset}
-              className="text-stone-600 hover:text-stone-900 transition-colors"
-            >
+            <Link href="/passwort-reset" className="text-stone-600 hover:text-stone-900 transition-colors">
               Passwort vergessen?
-            </button>
-            <Link href="/app" className="text-stone-600 hover:text-stone-900 transition-colors">
+            </Link>
+            <Link href="https://adhasi.de" className="text-stone-600 hover:text-stone-900 transition-colors">
               Noch kein Konto? 7 Tage kostenlos testen →
             </Link>
           </div>
@@ -150,7 +124,7 @@ export default function LoginForm() {
           <p className="text-sm font-semibold text-stone-800 mb-1">Noch kein ADHaSi-Konto?</p>
           <p className="text-xs text-stone-500 mb-4">7 Tage kostenlos testen – keine Kreditkarte nötig.</p>
           <Link
-            href="/app"
+            href="https://adhasi.de"
             className="block w-full py-2.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium text-sm text-center"
           >
             Jetzt kostenlos starten →

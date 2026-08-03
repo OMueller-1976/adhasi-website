@@ -90,6 +90,15 @@ export default function ImpressumPage() {
           des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den
           privaten, nicht kommerziellen Gebrauch gestattet.
         </p>
+
+        <h2>Hinweis zur Nutzung von Künstlicher Intelligenz</h2>
+        <p>
+          Einzelne Inhalte dieser Website werden unter Einsatz von KI-Systemen erstellt oder
+          unterstützt. Entsprechend Art. 50 der EU-Verordnung 2024/1689 (KI-VO) kennzeichnen wir
+          KI-generierte Beiträge, sofern keine redaktionelle Prüfung durch eine namentlich benannte
+          Person erfolgt ist. Bei redaktionell geprüften Beiträgen ist die verantwortliche Person
+          jeweils im Beitrag angegeben.
+        </p>
       </div>
     </section>
   )

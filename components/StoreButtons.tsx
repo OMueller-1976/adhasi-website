@@ -3,8 +3,6 @@ import Image from 'next/image'
 const APP_STORE_URL =
   'https://apps.apple.com/de/app/adhasi-lern-app-f%C3%BCr-adhs/id6766468944'
 
-const GOOGLE_PLAY_URL =
-  'https://play.google.com/store/apps/details?id=de.adhasi.app'
 
 export default function StoreButtons() {
   return (
@@ -24,17 +22,17 @@ export default function StoreButtons() {
         />
       </a>
       <a
-        href={GOOGLE_PLAY_URL}
+        href="https://play.google.com/store/apps/details?id=de.adhasi.app"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="ADHaSi bei Google Play herunterladen"
       >
-        <Image
-          src="/badge-googleplay.svg"
+        <img
+          src="/badge-googleplay.png"
           alt="Get it on Google Play"
           width={140}
           height={42}
-          priority
+          style={{ display: 'block' }}
         />
       </a>
     </div>

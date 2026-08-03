@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     'ADHaSi ist die spielerische Lernapp für Kinder mit ADHS. ' +
-    'KI-gestützt, DSGVO-konform, werbefrei. Bald im Google Play Store.',
+    'KI-gestützt, DSGVO-konform, werbefrei. Jetzt im App Store verfügbar.',
   authors: [{ name: 'ADHaSi / OneTitel', url: 'https://www.adhasi.de' }],
   creator: 'OneTitel – Oliver M. Müller',
   icons: {

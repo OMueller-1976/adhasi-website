@@ -53,7 +53,7 @@ export default function WaitlistForm() {
         disabled={status === 'loading'}
         className="inline-flex items-center justify-center gap-2 bg-adhasi-orange text-white font-body font-bold px-6 py-3 rounded-xl hover:bg-adhasi-orange-600 disabled:opacity-50 transition-colors whitespace-nowrap"
       >
-        {status === 'loading' ? 'Wird gesendet…' : 'Frühen Zugang sichern →'}
+        {status === 'loading' ? 'Wird gesendet…' : 'ADHaSi jetzt entdecken →'}
       </button>
       {status === 'error' && (
         <p className="w-full text-sm text-red-600 text-center">{errorMsg}</p>

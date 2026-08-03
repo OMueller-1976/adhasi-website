@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import EarlyAccessForm from './EarlyAccessForm'
+import StoreButtons from './StoreButtons'
 
 export default function Hero() {
   return (
@@ -10,7 +10,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-surface border border-adhasi-border text-neutral-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
             <span className="w-2 h-2 rounded-full bg-adhasi-green inline-block" />
-            Bald im Google Play Store verfügbar
+            Jetzt im App Store verfügbar ✓
           </div>
 
           <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
@@ -23,9 +23,7 @@ export default function Hero() {
             mit ADHS. Täglich 5 Minuten, maximaler Lernerfolg.
           </p>
 
-          <div id="early-access">
-            <EarlyAccessForm />
-          </div>
+          <StoreButtons />
         </div>
 
         {/* Logo illustration */}

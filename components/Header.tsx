@@ -163,6 +163,27 @@ export default function Header() {
           </div>
 
           <Link
+            href="/shop"
+            className="font-body font-semibold text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+          >
+            Shop
+          </Link>
+
+          <Link
+            href="/achtsamkeit"
+            className="font-body font-semibold text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+          >
+            Achtsamkeit
+          </Link>
+
+          <Link
+            href="/arbeitsblaetter"
+            className="font-body font-semibold text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+          >
+            Arbeitsblätter
+          </Link>
+
+          <Link
             href="/paedagogen-therapeuten-adhs"
             className="font-body font-semibold text-neutral-600 hover:text-neutral-900 transition-colors text-sm border border-neutral-300 px-4 py-2 rounded-full hover:border-neutral-500"
           >
@@ -264,6 +285,30 @@ export default function Header() {
               </div>
             )}
           </div>
+
+          <Link
+            href="/shop"
+            className="font-body font-semibold text-neutral-700 hover:text-neutral-900 transition-colors py-2 text-sm"
+            onClick={closeMobile}
+          >
+            Shop
+          </Link>
+
+          <Link
+            href="/achtsamkeit"
+            className="font-body font-semibold text-neutral-700 hover:text-neutral-900 transition-colors py-2 text-sm"
+            onClick={closeMobile}
+          >
+            Achtsamkeit
+          </Link>
+
+          <Link
+            href="/arbeitsblaetter"
+            className="font-body font-semibold text-neutral-700 hover:text-neutral-900 transition-colors py-2 text-sm"
+            onClick={closeMobile}
+          >
+            Arbeitsblätter
+          </Link>
 
           <div className="border-t border-adhasi-border mt-1 pt-3 flex flex-col gap-2">
             <Link

@@ -63,7 +63,7 @@ const tools = [
   },
   {
     name: 'ADHaSi',
-    platform: 'Android (bald iOS)',
+    platform: 'iOS (Android folgt)',
     category: 'Lern-App',
     description:
       'ADHaSi ist speziell für Kinder mit ADHS entwickelt: kurze Fokus-Sprint-Einheiten (5–10 Minuten), sofortiges Feedback nach jeder Aufgabe, Gamification ohne Reizüberflutung, und ein Eltern-Dashboard mit Fortschrittsberichten. Die KI passt das Niveau laufend an — kein Kind bleibt zurück.',
