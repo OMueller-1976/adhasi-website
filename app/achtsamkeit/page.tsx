@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import AdultToolsTeaser from '@/components/AdultToolsTeaser'
 import { defaultMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 
@@ -132,6 +133,9 @@ export default function AchtsamkeitPage() {
           </div>
         </div>
       </section>
+
+      {/* Tools für Erwachsene */}
+      <AdultToolsTeaser />
 
       {/* Related links */}
       <section className="py-10 sm:py-12 bg-white border-t border-adhasi-border">

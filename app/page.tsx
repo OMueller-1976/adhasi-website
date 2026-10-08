@@ -2,6 +2,7 @@ import Link from 'next/link'
 import StoreButtons from '@/components/StoreButtons'
 import Hero from '@/components/Hero'
 import FeatureGrid from '@/components/FeatureGrid'
+import AdultToolsTeaser from '@/components/AdultToolsTeaser'
 import StructuredData from '@/components/StructuredData'
 import { defaultMetadata, organizationJsonLd, softwareApplicationJsonLd, webSiteJsonLd } from '@/lib/seo'
 import type { Metadata } from 'next'
@@ -210,6 +211,9 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* Tools für Erwachsene */}
+      <AdultToolsTeaser className="bg-surface" />
 
       {/* Footer CTA */}
       <section className="py-16 sm:py-20 bg-adhasi-green" aria-labelledby="cta-heading">
