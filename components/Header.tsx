@@ -31,6 +31,17 @@ const ratgeberGroups = [
       { href: '/ratgeber/digitale-hilfsmittel-adhs', label: 'Digitale Hilfsmittel' },
     ],
   },
+  {
+    label: 'Für Erwachsene',
+    links: [
+      { href: '/ratgeber/erwachsene', label: 'Übersicht & Tools' },
+      { href: '/ratgeber/erwachsene/tagesstruktur', label: 'Tagesstruktur' },
+      { href: '/ratgeber/erwachsene/bewegung', label: 'Bewegung & Sport' },
+      { href: '/ratgeber/erwachsene/visualisierung', label: 'Visualisierung' },
+      { href: '/ratgeber/erwachsene/achtsamkeit', label: 'Achtsamkeit' },
+      { href: '/ratgeber/erwachsene/selbstakzeptanz', label: 'Selbstakzeptanz' },
+    ],
+  },
 ]
 
 const adhsWissenLinks = [
@@ -137,8 +148,8 @@ export default function Header() {
             </button>
 
             {/* Dropdown panel */}
-            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[680px] bg-white rounded-2xl border border-adhasi-border shadow-xl z-50 p-5">
-              <div className="grid grid-cols-3 gap-6">
+            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[680px] lg:w-[880px] bg-white rounded-2xl border border-adhasi-border shadow-xl z-50 p-5">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {ratgeberGroups.map((group) => (
                   <div key={group.label}>
                     <p className="font-body text-xs font-bold text-neutral-400 uppercase tracking-wide mb-2">{group.label}</p>

@@ -13,6 +13,14 @@ export const metadata: Metadata = defaultMetadata({
 
 const articles = [
   {
+    href: '/ratgeber/erwachsene',
+    icon: '🌿',
+    title: 'Tipps für Erwachsene mit ADHS',
+    teaser: 'Tagesstruktur, Bewegung, Visualisierung, Achtsamkeit und Selbstakzeptanz — mit kostenlosen Tools zum Ausprobieren.',
+    readingTime: '5 Artikel + Tools',
+    category: 'Für Erwachsene',
+  },
+  {
     href: '/ratgeber/adhs-verstehen',
     icon: '🧠',
     title: 'ADHS verstehen',
@@ -135,7 +143,7 @@ export default function RatgeberPage() {
             erklärt, was dahinter steckt, wie man fördert und welche Unterstützung es gibt —
             kostenlos, ohne Anmeldung, wissenschaftlich fundiert.
           </p>
-          <p className="font-body text-sm text-neutral-400 mt-2">12 Artikel · Lesezeit: 3–9 Minuten pro Artikel</p>
+          <p className="font-body text-sm text-neutral-400 mt-2">13 Beiträge · Lesezeit: 3–9 Minuten pro Artikel</p>
         </div>
       </section>
 
