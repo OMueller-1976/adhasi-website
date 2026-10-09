@@ -20,6 +20,9 @@ const ratgeberGroups = [
       { href: '/ratgeber/motivation-bei-schulfrust', label: 'Motivation aufbauen' },
       { href: '/ratgeber/selbstwert-staerken', label: 'Selbstwert stärken' },
       { href: '/ratgeber/kommunikation-mit-adhs-kind', label: 'Mit dem Kind sprechen' },
+      { href: '/ratgeber/familienalltag-adhs', label: 'Familienalltag & Tools' },
+      { href: '/ratgeber/familienalltag-adhs/routinen-wochenplan', label: 'Routinen & Wochenplan' },
+      { href: '/ratgeber/familienalltag-adhs/punkteplan', label: 'Punkteplan' },
     ],
   },
   {
