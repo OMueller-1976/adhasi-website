@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/ratgeber/familienalltag-adhs/eltern-entlastung`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/ratgeber/familienalltag-adhs/regeln-wochenjobs`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/veranstaltungen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/veranstaltungen/2027`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/buchempfehlungen`,                                                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/datenschutz`,                                                         lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.5 },
     { url: `${BASE_URL}/agb`,                                                                 lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.5 },

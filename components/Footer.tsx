@@ -10,6 +10,7 @@ const adhsWissenLinks = [
   { href: '/achtsamkeit', label: 'Achtsamkeit' },
   { href: '/adhs-app', label: 'ADHS App für Kinder' },
   { href: '/veranstaltungen', label: 'Veranstaltungen 2026' },
+  { href: '/veranstaltungen/2027', label: 'Veranstaltungen 2027' },
 ]
 
 const legalLinks = [

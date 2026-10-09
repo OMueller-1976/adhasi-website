@@ -11,13 +11,6 @@ export const metadata: Metadata = defaultMetadata({
   path: '/veranstaltungen',
 })
 
-const highlightEvent = {
-  name: 'ADHS-Kongress Deutschland 2026',
-  veranstalter: 'ADHS Deutschland e.V.',
-  website: 'https://www.adhs-deutschland.de',
-  text: 'Der wichtigste deutschsprachige Jahreskongress zu ADHS – für Eltern, Fachkräfte und Betroffene. Vorträge, Workshops und direkter Austausch mit Expertinnen und Experten.',
-}
-
 const events = [
   {
     name: 'ADHS Europe Conference 2026',
@@ -102,35 +95,6 @@ export default function VeranstaltungenPage() {
             </p>
           </div>
 
-          {/* Highlight-Kachel */}
-          <div className="border-2 border-adhasi-green rounded-2xl p-6 sm:p-8 mb-6 relative bg-white">
-            <span className="absolute -top-3 left-6 bg-adhasi-green text-white text-xs font-semibold px-3 py-1 rounded-full">
-              Jahres-Highlight
-            </span>
-            <div className="flex items-start gap-4">
-              <span className="text-3xl shrink-0">🏆</span>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-heading text-xl sm:text-2xl font-bold text-neutral-900 mb-1">
-                  {highlightEvent.name}
-                </h2>
-                <p className="font-body text-sm text-adhasi-green font-semibold mb-3">
-                  {highlightEvent.veranstalter}
-                </p>
-                <p className="font-body text-sm text-neutral-600 leading-relaxed mb-4">
-                  {highlightEvent.text}
-                </p>
-                <a
-                  href={highlightEvent.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-adhasi-green text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
-                >
-                  Zur Veranstalter-Website →
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Weitere Veranstaltungen */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {events.map((ev) => (
@@ -168,7 +132,9 @@ export default function VeranstaltungenPage() {
               z. B. bei <a href="https://www.adhs-deutschland.de" target="_blank" rel="noopener noreferrer" className="text-adhasi-green hover:underline">ADHS Deutschland e.V.</a>,{' '}
               <a href="https://www.chadd.org" target="_blank" rel="noopener noreferrer" className="text-adhasi-green hover:underline">CHADD</a> und{' '}
               <a href="https://www.iacapap.org" target="_blank" rel="noopener noreferrer" className="text-adhasi-green hover:underline">IACAPAP</a>.{' '}
-              Alle Links auf dieser Seite führen zu externen Websites.
+              Alle Links auf dieser Seite führen zu externen Websites. Einen Ausblick auf das nächste
+              Jahr finden Sie unter{' '}
+              <Link href="/veranstaltungen/2027" className="text-adhasi-green hover:underline">Veranstaltungen 2027</Link>.
             </p>
           </div>
 

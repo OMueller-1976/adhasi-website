@@ -52,6 +52,7 @@ const adhsWissenLinks = [
   { href: '/adhs-foerderung', label: 'ADHS Förderung', desc: 'Therapie & was wirklich hilft' },
   { href: '/adhs-eltern-tipps', label: 'ADHS Eltern-Tipps', desc: 'Alltag, Routine & Hausaufgaben' },
   { href: '/veranstaltungen', label: 'Veranstaltungen 2026', desc: 'Kongresse & Fachtagungen' },
+  { href: '/veranstaltungen/2027', label: 'Veranstaltungen 2027', desc: 'Termine im Voraus planen' },
 ]
 
 export default function Header() {
