@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
     <section className="py-12 sm:py-16 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 prose">
         <h1>Datenschutzerklärung</h1>
-        <p className="text-sm text-neutral-500">Stand: April 2026</p>
+        <p className="text-sm text-neutral-500">Stand: Oktober 2026</p>
 
         <h2>1. Verantwortlicher</h2>
         <p>
@@ -104,7 +104,46 @@ export default function DatenschutzPage() {
           </li>
         </ul>
 
-        <h3>3.4 Anonyme Authentifizierung</h3>
+        <h3>3.4 ADHaSi Begleiter (iOS-App für Erwachsene)</h3>
+        <p>
+          „ADHaSi Begleiter“ ist eine eigenständige App für Erwachsene mit ADHS. Sie benötigt{' '}
+          <strong>kein Benutzerkonto</strong> und keine Anmeldung.
+        </p>
+        <ul>
+          <li>
+            <strong>Lokale Daten:</strong> Tagebucheinträge, Stimmung, Einflussfaktoren, Routinen,
+            Gewohnheiten, Notizen, Name (optional) und Favoriten werden ausschließlich auf deinem
+            Gerät gespeichert. Sie werden nicht an uns oder Dritte übertragen und nicht für Werbung
+            oder Tracking verwendet.
+          </li>
+          <li>
+            <strong>Arzttermin-Mappe (PDF):</strong> Das PDF wird lokal auf deinem Gerät erzeugt.
+            Ob und wohin du es teilst (z. B. per E-Mail), entscheidest allein du über das
+            iOS-Teilen-Menü.
+          </li>
+          <li>
+            <strong>Pro-Kauf:</strong> Der einmalige Kauf „ADHaSi Begleiter Pro“ wird über Apple
+            (App Store) abgewickelt. Zur Prüfung und Wiederherstellung des Kaufstatus nutzen wir
+            RevenueCat Inc. Dabei werden eine anonyme App-User-ID und Kaufinformationen
+            (Produkt, Kaufstatus) übertragen. Es werden keine Tagebuch- oder Gesundheitsdaten
+            übertragen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
+          </li>
+          <li>
+            <strong>Keine Werbung, kein Tracking:</strong> Die App enthält keine Werbe-SDKs und
+            keine Analyse-Dienste.
+          </li>
+          <li>
+            <strong>Löschung:</strong> Du kannst alle lokalen Daten jederzeit in den Einstellungen
+            der App löschen oder durch Deinstallation der App entfernen. Kaufdaten bei Apple
+            verwaltest du über deine Apple-ID.
+          </li>
+          <li>
+            <strong>Hinweis:</strong> Die App ist kein Medizinprodukt und ersetzt keine ärztliche
+            oder therapeutische Beratung. Einzelne Inhalte können KI-gestützt erstellt sein.
+          </li>
+        </ul>
+
+        <h3>3.5 Anonyme Authentifizierung</h3>
         <p>
           Bei der Trial-Nutzung wird Supabase Anonymous Auth verwendet. Die anonyme Session wird bei
           Registrierung mit dem Eltern-Account verknüpft. Alle Lerndaten bleiben erhalten.
@@ -154,7 +193,7 @@ export default function DatenschutzPage() {
               </tr>
               <tr>
                 <td><strong>RevenueCat Inc.</strong></td>
-                <td>Abonnementverwaltung (In-App-Käufe)</td>
+                <td>Verwaltung von Abonnements und Käufen (In-App-Käufe, inkl. Pro-Kauf in ADHaSi Begleiter)</td>
                 <td>USA</td>
                 <td>EU-SCCs, AVV nach Art. 28 DSGVO</td>
               </tr>
@@ -163,6 +202,12 @@ export default function DatenschutzPage() {
                 <td>App-Distribution, Zahlungsabwicklung (Google Play Billing)</td>
                 <td>USA (EU-Serverstandorte verfügbar)</td>
                 <td>EU-SCCs, Google Cloud DPA</td>
+              </tr>
+              <tr>
+                <td><strong>Apple Inc. (App Store)</strong></td>
+                <td>App-Distribution und Zahlungsabwicklung (ADHaSi Begleiter, iOS)</td>
+                <td>USA / Irland (Apple Distribution International)</td>
+                <td>EU-SCCs, Apple Datenschutzbestimmungen</td>
               </tr>
               <tr>
                 <td><strong>n8n GmbH</strong></td>
